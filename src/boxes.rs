@@ -16,6 +16,8 @@ pub trait BoxCollection{
     fn category_ids() -> &IVECTOR;
     fn is_normalized() -> &bool;
     fn image_name() -> &str;
+    fn num_boxes() -> u32;
+    fn normalize_boxes(image_height : &f64, image_width : &f64) ->BOXDATA;
 }
 
 pub struct BoxCollectionXYWH{
