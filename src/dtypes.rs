@@ -1,6 +1,6 @@
-use nalgebra as na;
+use ndarray as nd;
 use std::{vec};
 
-type BOXDATA = na::OMatrix<f64, na::Dynamic, na::Const<4>>;
-type FVECTOR = vec.Vec<f64>;
-type IVECTOR = vec.Vec<i32>;
+type BOXDATA = nd::Array2<f64>;
+type FVECTOR = nd::Array1<f64>;
+type IVECTOR = nd::Array1<i32>;
