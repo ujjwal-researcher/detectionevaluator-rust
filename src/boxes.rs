@@ -11,6 +11,11 @@ pub trait BoxCollection{
     fn widths() -> &FVECTOR;
     fn areas () -> &FVECTOR;
     fn aspect_ratios() -> &FVECTOR;
+    fn boxes() -> &BOXDATA;
+    fn confidences() -> &FVECTOR;
+    fn category_ids() -> &IVECTOR;
+    fn is_normalized() -> &bool;
+    fn image_name() -> &str;
 }
 
 pub struct BoxCollectionXYWH{
@@ -18,7 +23,8 @@ pub struct BoxCollectionXYWH{
     box_type : BOXFORMAT,
     bounding_box : BOXDATA,
     box_confidences : FVECTOR,
-    box_category_ids : IVECTOR
+    box_category_ids : IVECTOR,
+    box_normalized : bool
 }
 
 pub struct BoxCollectionXYXY{
@@ -26,5 +32,6 @@ pub struct BoxCollectionXYXY{
     box_type : BOXFORMAT,
     bounding_box : BOXDATA,
     box_confidences : FVECTOR,
-    box_category_ids : IVECTOR
+    box_category_ids : IVECTOR,
+    box_normalized : bool
 }
