@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 log = "0.4.14"
-nalgebra = "0.28.0"
+ndarray = "0.15.3"
